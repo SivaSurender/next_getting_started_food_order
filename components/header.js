@@ -2,12 +2,14 @@ import React from "react";
 import mainImage from "@/assets/logo.png";
 import Link from "next/link";
 import classes from "./header.module.css";
+import Image from "next/image";
 
 function Header() {
   return (
     <header className={classes.header}>
       <Link href="/" className={classes.logo}>
-        <img src={mainImage.src} alt="main image" /> A new era in food making
+        <Image src={mainImage} alt="main image" priority />A new era in food
+        making
       </Link>
 
       <nav className={classes.nav}>
