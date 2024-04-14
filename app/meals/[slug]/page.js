@@ -7,9 +7,10 @@ import { getMeal } from "@/lib/getmeals";
 export default function MealDetailsPage({ params }) {
   const meal = getMeal(params.slug);
 
-  // if (!meal) {
-  //   notFound();
-  // }
+  if (!meal) {
+    // show the closest available not found
+    notFound();
+  }
 
   console.log(meal, "dsdmeals");
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
