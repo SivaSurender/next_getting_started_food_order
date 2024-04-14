@@ -1,8 +1,41 @@
-import React from "react";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 
-function DynamicSlug({ params }) {
-  // Inside slug gives dynamic routes i.e id which can be received as a prop like abve
-  return <div>DynamicSlug {params.slug}</div>;
+import classes from "./page.module.css";
+import { getMeal } from "@/lib/getmeals";
+
+export default function MealDetailsPage({ params }) {
+  const meal = getMeal(params.slug);
+
+  // if (!meal) {
+  //   notFound();
+  // }
+
+  console.log(meal, "dsdmeals");
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
+
+  return (
+    <>
+      <header className={classes.header}>
+        <div className={classes.image}>
+          <Image src={meal.image} alt={meal.title} fill />
+        </div>
+        <div className={classes.headerText}>
+          <h1>{meal.title}</h1>
+          <p className={classes.creator}>
+            by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
+          </p>
+          <p className={classes.summary}>{meal.summary}</p>
+        </div>
+      </header>
+      <main>
+        <p
+          className={classes.instructions}
+          dangerouslySetInnerHTML={{
+            __html: meal.instructions,
+          }}
+        ></p>
+      </main>
+    </>
+  );
 }
-
-export default DynamicSlug;
