@@ -1,15 +1,16 @@
 import React from "react";
 import mainImage from "@/assets/logo.png";
 import Link from "next/link";
+import classes from "./header.module.css";
 
 function Header() {
   return (
-    <>
-      <Link href="/">
+    <header className={classes.header}>
+      <Link href="/" className={classes.logo}>
         <img src={mainImage.src} alt="main image" /> A new era in food making
       </Link>
 
-      <nav>
+      <nav className={classes.nav}>
         <ul>
           <li>
             <Link href="/meals">Browse Meals</Link>
@@ -19,7 +20,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   );
 }
 
