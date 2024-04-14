@@ -5,9 +5,6 @@ function Meals() {
   return (
     <main>
       Meal
-      <p>
-        <Link href="/meals/share">Goto Share</Link>
-      </p>
       <div>
         <Link href="meals/route-1">Route One</Link>
       </div>
