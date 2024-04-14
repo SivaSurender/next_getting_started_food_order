@@ -1,15 +1,12 @@
-"use client";
 import React from "react";
 import mainImage from "@/assets/logo.png";
 import Link from "next/link";
 import classes from "./header.module.css";
 import Image from "next/image";
 import HeaderBackGround from "./header-background";
-import { usePathname } from "next/navigation";
+import NavLink from "../links/nav-link";
 
 function Header() {
-  const activePath = usePathname();
-  console.log(activePath);
   return (
     <>
       <HeaderBackGround />
@@ -22,20 +19,10 @@ function Header() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link
-                href="/meals"
-                className={activePath === "/community" && "active"}
-              >
-                Browse Meals
-              </Link>
+              <NavLink href="/meals">Browse Meals</NavLink>
             </li>
             <li>
-              <Link
-                href="/community"
-                className={activePath === "/community" && "active"}
-              >
-                Visit Community
-              </Link>
+              <NavLink href="/community">Visit Community</NavLink>
             </li>
           </ul>
         </nav>
