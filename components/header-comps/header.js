@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import mainImage from "@/assets/logo.png";
 import Link from "next/link";
 import classes from "./header.module.css";
 import Image from "next/image";
 import HeaderBackGround from "./header-background";
+import { usePathname } from "next/navigation";
 
 function Header() {
+  const activePath = usePathname();
+  console.log(activePath);
   return (
     <>
       <HeaderBackGround />
@@ -18,10 +22,20 @@ function Header() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link href="/meals">Browse Meals</Link>
+              <Link
+                href="/meals"
+                className={activePath === "/community" && "active"}
+              >
+                Browse Meals
+              </Link>
             </li>
             <li>
-              <Link href="/community">Visit Community</Link>
+              <Link
+                href="/community"
+                className={activePath === "/community" && "active"}
+              >
+                Visit Community
+              </Link>
             </li>
           </ul>
         </nav>
