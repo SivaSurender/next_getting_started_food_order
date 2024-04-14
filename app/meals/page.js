@@ -2,8 +2,15 @@ import MealsGrid from "@/components/meals/meal-grid";
 import Link from "next/link";
 import React from "react";
 import classes from "./page.module.css";
+import { getMeals } from "@/lib/getmeals";
 
-export default function MealsPage() {
+//  async can be used in next js as server side R
+export default async function MealsPage() {
+  //  get from meals
+
+  const meals = await getMeals();
+
+  console.log(meals, "mealz");
   return (
     <>
       <header className={classes.header}>
@@ -19,7 +26,7 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={[]} />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
