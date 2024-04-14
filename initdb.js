@@ -164,6 +164,7 @@ const dummyMeals = [
   },
 ];
 
+// if it doesnt exist
 db.prepare(
   `
    CREATE TABLE IF NOT EXISTS meals (
