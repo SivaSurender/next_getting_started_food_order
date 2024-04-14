@@ -1,16 +1,21 @@
 import MealsGrid from "@/components/meals/meal-grid";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import classes from "./page.module.css";
 import { getMeals } from "@/lib/getmeals";
+import loading from "./loading-out";
 
-//  async can be used in next js as server side R
-export default async function MealsPage() {
-  //  get from meals
-
+async function Meals() {
   const meals = await getMeals();
 
   console.log(meals, "mealz");
+  return <MealsGrid meals={meals} />;
+}
+
+//  async can be used in next js as server side R by default
+export default function MealsPage() {
+  //  get from meals
+
   return (
     <>
       <header className={classes.header}>
@@ -26,7 +31,15 @@ export default async function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={meals} />
+        <Suspense
+          fallback={
+            <div className={classes.loading}>
+              Fetching data, Please Wait 🙂...
+            </div>
+          }
+        >
+          <Meals />
+        </Suspense>
       </main>
     </>
   );
