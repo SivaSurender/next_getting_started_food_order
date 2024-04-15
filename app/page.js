@@ -46,6 +46,14 @@ export default function Home() {
             with other food lovers.
           </p>
         </section>
+        <p class="copyright">
+          {" "}
+          ©{" "}
+          <a class="twitter-link" target="_blank" href="#">
+            <b>Bala SS</b>
+          </a>
+          . Done in India with love ♥.{" "}
+        </p>
       </main>
     </>
   );

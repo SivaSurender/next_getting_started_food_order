@@ -40,3 +40,12 @@ body {
   font-weight: 500;
   color: #ddd8d8;
 }
+.copyright {
+  color: #918581;
+  margin-top: 4rem;
+  padding: 0 3.5rem;
+  font-size: 0.7rem;
+}
+.copyright .twitter-link:visited {
+  color: #918581;
+}
