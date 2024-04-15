@@ -21,8 +21,8 @@ const dummyMeals = [
       4. Serve:
          Complete the assembly with the top bun and serve hot.
     `,
-    creator: "John Doe",
-    creator_email: "johndoe@example.com",
+    creator: "Testuser1",
+    creator_email: "testuser2@example.com",
   },
   {
     title: "Spicy Curry",
@@ -46,8 +46,8 @@ const dummyMeals = [
       5. Serve:
          Enjoy this creamy curry with rice or bread.
     `,
-    creator: "Max Schwarz",
-    creator_email: "max@example.com",
+    creator: "Testuser2",
+    creator_email: "sa2@example.com",
   },
   {
     title: "Homemade Dumplings",
@@ -68,8 +68,8 @@ const dummyMeals = [
       4. Serve:
          Enjoy these dumplings hot, with a dipping sauce of your choice.
     `,
-    creator: "Emily Chen",
-    creator_email: "emilychen@example.com",
+    creator: "U3",
+    creator_email: "dsf@example.com",
   },
   {
     title: "Classic Mac n Cheese",
@@ -93,8 +93,8 @@ const dummyMeals = [
       5. Serve:
          Serve hot, garnished with parsley if desired.
     `,
-    creator: "Laura Smith",
-    creator_email: "laurasmith@example.com",
+    creator: "userfour",
+    creator_email: "dsf@example.com",
   },
   {
     title: "Authentic Pizza",
@@ -115,52 +115,8 @@ const dummyMeals = [
       4. Serve:
          Slice hot and enjoy with a sprinkle of basil leaves.
     `,
-    creator: "Mario Rossi",
+    creator: "userfve",
     creator_email: "mariorossi@example.com",
-  },
-  {
-    title: "Wiener Schnitzel",
-    slug: "wiener-schnitzel",
-    image: "/images/schnitzel.jpg",
-    summary:
-      "Crispy, golden-brown breaded veal cutlet, a classic Austrian dish.",
-    instructions: `
-      1. Prepare the veal:
-         Pound veal cutlets to an even thickness.
-
-      2. Bread the veal:
-         Coat each cutlet in flour, dip in beaten eggs, and then in breadcrumbs.
-
-      3. Fry the schnitzel:
-      Heat oil in a pan and fry each schnitzel until golden brown on both sides.
-
-      4. Serve:
-      Serve hot with a slice of lemon and a side of potato salad or greens.
- `,
-    creator: "Franz Huber",
-    creator_email: "franzhuber@example.com",
-  },
-  {
-    title: "Fresh Tomato Salad",
-    slug: "fresh-tomato-salad",
-    image: "/images/tomato-salad.jpg",
-    summary:
-      "A light and refreshing salad with ripe tomatoes, fresh basil, and a tangy vinaigrette.",
-    instructions: `
-      1. Prepare the tomatoes:
-        Slice fresh tomatoes and arrange them on a plate.
-    
-      2. Add herbs and seasoning:
-         Sprinkle chopped basil, salt, and pepper over the tomatoes.
-    
-      3. Dress the salad:
-         Drizzle with olive oil and balsamic vinegar.
-    
-      4. Serve:
-         Enjoy this simple, flavorful salad as a side dish or light meal.
-    `,
-    creator: "Sophia Green",
-    creator_email: "sophiagreen@example.com",
   },
 ];
 
