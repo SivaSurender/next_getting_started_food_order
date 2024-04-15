@@ -3,6 +3,7 @@
 
 import { redirect } from "next/navigation";
 import { saveMyMeal } from "./lib/getmeals";
+import { revalidatePath } from "next/cache";
 
 // helper fn
 
@@ -35,5 +36,10 @@ export async function sendMeal(_, receivedFormData) {
   }
   await saveMyMeal(meal);
   console.log(meal);
+  //  ignore cachcing
+  // direct path - not nesting included
+  //  "/" with page as 2nd argument only that page
+  //  "/", with layout as 2nd revalidates everything
+  revalidatePath("/meals");
   redirect("/meals");
 }
