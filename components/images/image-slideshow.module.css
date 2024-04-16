@@ -24,3 +24,9 @@
   opacity: 1;
   transform: scale(1) translateX(0) rotate(0);
 }
+@media (max-width: 767px) {
+  .slideshow {
+    height: 204px;
+    width: 135px;
+  }
+}
