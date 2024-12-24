@@ -49,8 +49,12 @@ export default function Home() {
         <p class="copyright">
           {" "}
           ©{" "}
-          <a class="twitter-link" target="_blank" href="#">
-            <b>Bala SS</b>
+          <a
+            className="twitter-link cursor-pointer"
+            target="_blank"
+            href="https://my-portfolio-bala.vercel.app/"
+          >
+            <b>Bala.E</b>
           </a>
           . Done in India with love ♥.{" "}
         </p>
